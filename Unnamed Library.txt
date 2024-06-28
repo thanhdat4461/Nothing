@@ -759,7 +759,6 @@ local function createList(option, parent, holder)
         button.MouseButton1Click:Connect(function()
             self:SetValue(value)
             tweenService:Create(CloseDowndrop, TweenInfo.new(0.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Rotation = 180}):Play()
-    	    wait(0.3)
             local position = main.AbsolutePosition
             option.open = false
             content.ScrollBarThickness = 0
