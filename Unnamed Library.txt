@@ -451,9 +451,9 @@ local function createSlider(option, parent)
 	local main5 = library:Create("Frame", {
 		LayoutOrder = option.position,
 		Size = UDim2.new(1, 0, 0, 50),
-		Name = "Slider"
+		Name = "Slider",
 		BackgroundTransparency = 1,
-        Active = true,
+                Active = true,
 		Parent = parent.content
 	})
 	
@@ -486,14 +486,14 @@ local function createSlider(option, parent)
 		Position = UDim2.new(0, 0, 0, 27),
 		Size = UDim2.new(1, 0, 0, 18),
 		Name = "Bar", 
-        BackgroundColor3 = Color3.fromRGB(255, 255, 255),
-        BorderSizePixel = 0,
+                BackgroundColor3 = Color3.fromRGB(255, 255, 255),
+                BorderSizePixel = 0,
 		BackgroundTransparency = 1,
 		Parent = main5
 	})
 	
 	local fill = library:Create("ImageLabel", {
-	    Name = "Fill",
+	        Name = "Fill",
 		BackgroundTransparency = 1,
 		Image = "rbxassetid://3570695787",
 		ImageColor3 = Color3.fromRGB(60, 60, 60),
@@ -589,9 +589,9 @@ local function createSlider(option, parent)
 	    tweenService:Create(fill, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(255, 65, 65)}):Play()
 	    tweenService:Create(circle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(3.5, 0, 3.5, 0), ImageColor3 = Color3.fromRGB(255, 65, 65)}):Play()      
 		option:SetValue(tonumber(inputvalue.Text) or option.value)
-		wait(0.3)
-		tweenService:Create(fill, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(60, 60, 60)}):Play()
-		tweenService:Create(circle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0), ImageColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+	    wait(0.3)
+	    tweenService:Create(fill, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {ImageColor3 = Color3.fromRGB(60, 60, 60)}):Play()
+	    tweenService:Create(circle, TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {Size = UDim2.new(0, 0, 0, 0), ImageColor3 = Color3.fromRGB(60, 60, 60)}):Play()
 	end)
 
 	function option:SetValue(value)
